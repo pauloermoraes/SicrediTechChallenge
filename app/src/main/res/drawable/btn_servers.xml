@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <selector>
+
+            <item android:state_pressed="true">
+                <layer-list>
+                    <item>
+                        <shape android:shape="oval">
+                            <solid android:color="#C9C9C9" />
+                        </shape>
+                    </item>
+                    <item
+                        android:bottom="4dp"
+                        android:left="4dp"
+                        android:right="4dp"
+                        android:top="4dp">
+                        <shape android:shape="oval">
+                            <solid android:color="#AA696969" />
+                        </shape>
+                    </item>
+
+                    <item
+                        android:bottom="10dp"
+                        android:drawable="@drawable/ic_mode_edit_white"
+                        android:left="10dp"
+                        android:right="10dp"
+                        android:top="10dp" />
+                </layer-list>
+            </item>
+
+            <item android:state_focused="true">
+                <layer-list>
+                    <item>
+                        <shape android:shape="oval">
+                            <solid android:color="#C9C9C9" />
+                        </shape>
+                    </item>
+                    <item
+                        android:bottom="4dp"
+                        android:left="4dp"
+                        android:right="4dp"
+                        android:top="4dp">
+                        <shape android:shape="oval">
+                            <solid android:color="#AA696969" />
+                        </shape>
+                    </item>
+
+                    <item
+                        android:bottom="10dp"
+                        android:drawable="@drawable/ic_mode_edit_white"
+                        android:left="10dp"
+                        android:right="10dp"
+                        android:top="10dp" />
+                </layer-list>
+            </item>
+
+            <item>
+                <layer-list>
+                    <item>
+                        <shape android:shape="oval">
+                            <solid android:color="#C9C9C9" />
+                        </shape>
+                    </item>
+                    <item
+                        android:bottom="4dp"
+                        android:left="4dp"
+                        android:right="4dp"
+                        android:top="4dp">
+                        <shape android:shape="oval">
+                            <gradient
+                                android:angle="270"
+                                android:centerColor="#AA696969"
+                                android:endColor="#45696969"
+                                android:startColor="#696969" />
+                        </shape>
+                    </item>
+
+                    <item
+                        android:bottom="10dp"
+                        android:drawable="@drawable/ic_mode_edit_white"
+                        android:left="10dp"
+                        android:right="10dp"
+                        android:top="10dp" />
+                </layer-list>
+            </item>
+
+        </selector>
+    </item>
+
+</layer-list>

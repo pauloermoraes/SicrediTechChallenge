@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Sicredi Tech Challenge</string>
+
+    <!--region Accessibility Descriptions -->
+    <string name="event_banner_description">Imagem de um banner do evento</string>
+    <string name="splash_logo_description">Lôgo do app</string>
+    <string name="get_events_error_image_description">Houve um erro no carregamento dos eventos</string>
+    <!--endregion Accessibility Descriptions -->
+
+    <!--region Events -->
+    <string name="ok_label">OK</string>
+    <string name="events_label">Eventos</string>
+    <string name="event_label">Evento</string>
+    <string name="event_check_in_label">Check-In</string>
+    <string name="name_label">Nome</string>
+    <string name="email_label">E-mail</string>
+    <string name="success_label">Sucesso</string>
+    <string name="error_label">Erro</string>
+    <string name="event_check_in_invalid_name_label">"O nome é inválido"</string>
+    <string name="event_check_in_invalid_email_label">"O e-mail é inválido"</string>
+    <string name="event_check_in_success_label">Check-In realizado com sucesso</string>
+    <string name="event_check_in_error_label">Ocorreu um erro no Check-In, tente novamente em instantes.</string>
+    <!--endregion Events -->
+
+
+    <!--region Tools Strings -->
+    <string name="googlemaps_not_found">Houve um problema ao buscar o GoogleMaps em seu dispositivo</string>
+    <!--endregion Tools Strings -->
+
+</resources>

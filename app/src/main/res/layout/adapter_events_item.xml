@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:background="#777"
+    tools:context=".features.events.presentation.view.activities.MainActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_event_image_banner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="100dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/ic_image_placeholder" />
+
+    <ImageView
+        android:id="@+id/iv_event_image_banner_bottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/event_banner_description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_parent_horizontal_65"
+        app:srcCompat="@drawable/shape_event_image_bottom" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_price_tag" />
+
+        <TextView
+            android:id="@+id/tv_event_price"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeMinTextSize="10sp"
+            android:gravity="center_vertical|end"
+            android:lines="1"
+            android:rotation="45"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:autoSizeMinTextSize="4sp"
+            app:autoSizeStepGranularity="1sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@+id/guideline_price_horizontal_75"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_price_vertical_85"
+            app:layout_constraintStart_toStartOf="@+id/guideline_price_vertical_20"
+            app:layout_constraintTop_toTopOf="@+id/guideline_price_horizontal_30"
+            tools:text="R$29,90" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_price_horizontal_30"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_price_horizontal_75"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_price_vertical_20"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_price_vertical_85"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.85" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_event_title"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="20dp"
+            android:autoSizeMinTextSize="30sp"
+            android:gravity="start|bottom"
+            android:paddingStart="16dp"
+            android:textColor="@color/white"
+            app:autoSizeStepGranularity="1sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_content_horizontal_85"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_content_vertical_70"
+            app:layout_constraintHorizontal_bias="0.636"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline_content_horizontal_65"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/shape_event_image_bottom"
+            tools:text="Feira de adoção de animais na Redenção" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tv_event_date_label"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp"
+            android:gravity="center_vertical|start"
+            android:hint="O evento será em:"
+            android:textColorHint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_content_vertical_70"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guideline_content_horizontal_85"
+            app:srcCompat="@drawable/shape_event_image_bottom">
+
+            <EditText
+                android:id="@+id/tv_event_date"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#0000"
+                android:clickable="false"
+                android:editable="false"
+                android:inputType="none"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="28/03/2022" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_event_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/selector_button_style"
+            android:gravity="center"
+            android:lines="1"
+            android:text="+ Detalhes"
+            app:autoSizeStepGranularity="1sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline_content_vertical_70"
+            app:srcCompat="@drawable/shape_event_image_bottom" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_content_vertical_30"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_content_vertical_50"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_content_vertical_70"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_content_horizontal_65"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.6" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_content_horizontal_75"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_content_horizontal_85"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.8" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_parent_horizontal_65"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
