@@ -1,7 +1,7 @@
 package br.com.sicredi.techchallenge.features.events.domain.usecases
 
+import br.com.sicredi.techchallenge.features.events.domain.models.Event
 import br.com.sicredi.techchallenge.features.events.domain.repositories.IEventsRepository
-import br.com.sicredi.techchallenge.features.events.external.network.bodies.responses.EventResponse
 import br.com.sicredi.techchallenge.global.exceptions.InvalidEventIdException
 import io.mockk.MockKAnnotations
 import io.mockk.coEvery
@@ -32,14 +32,14 @@ class GetEventDetailsUseCaseTest {
                 iEventsRepository.getEventDetails(any())
             } coAnswers {
                 flow {
-                    emit(TestEventDetails.eventResponse)
+                    emit(TestEventDetails.event)
                 }
             }
 
             val result = iGetEventDetailsUseCase.execute(
                 "1"
             ).first()
-            assertTrue(result.id?.isNotEmpty() == true)
+            assertTrue(result.id.isNotEmpty())
         }
     }
 
@@ -50,7 +50,7 @@ class GetEventDetailsUseCaseTest {
                 iEventsRepository.getEventDetails(any())
             } coAnswers {
                 flow {
-                    emit(TestEventDetails.eventResponse)
+                    emit(TestEventDetails.event)
                 }
             }
 
@@ -62,7 +62,8 @@ class GetEventDetailsUseCaseTest {
 }
 
 private object TestEventDetails {
-    val eventResponse = EventResponse(
+    val event = Event(
+        "1",
         listOf(),
         1534784400000,
         "O Patas Dadas estará na Redenção, nesse domingo, com cães para adoção e produtos à venda!\n\nNa ocasião, teremos bottons, bloquinhos e camisetas!\n\nTraga seu Pet, os amigos e o chima, e venha aproveitar esse dia de sol com a gente e com alguns de nossos peludinhos - que estarão prontinhos para ganhar o ♥ de um humano bem legal pra chamar de seu. \n\nAceitaremos todos os tipos de doação:\n- guias e coleiras em bom estado\n- ração (as que mais precisamos no momento são sênior e filhote)\n- roupinhas \n- cobertas \n- remédios dentro do prazo de validade",
@@ -70,19 +71,6 @@ private object TestEventDetails {
         -51.2146267,
         -30.0392981,
         29.99,
-        "Feira de adoção de animais na Redenção",
-        "1"
-    )
-
-    val eventResponseFailure = EventResponse(
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Feira de adoção de animais na Redenção"
     )
 }
