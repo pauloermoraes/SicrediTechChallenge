@@ -15,6 +15,6 @@ class DoublePriceToStringFormattedPriceMapperTest {
     @Test
     fun map() {
         val mappedValue = doublePriceToStringFormattedPriceMapper.map(29.99)
-        assert("R$ 29,99" === mappedValue)
+        assert("R\$ 29,99" == mappedValue)
     }
 }
